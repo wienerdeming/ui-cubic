@@ -1,11 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled, { withTheme, css } from 'styled-components'
+import styled from 'styled-components'
 import ReactSelect from 'react-select'
 import InputLabel from '../InputLabel'
 import InputError from '../InputError'
 import selectStyles from './selectStyles'
 import MenuList from './MenuList'
+
+const withTheme = require('styled-components').withTheme
+const css = require('styled-components').css
 
 const options = [
   // { value: 'cherry', label: 'Cherry' },

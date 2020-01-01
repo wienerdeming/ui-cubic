@@ -1,5 +1,8 @@
 {
   "plugins": [
-    ["module-resolver", {"root": ["./src"]}]
-  ]
+    ["module-resolver", {"root": ["./src"]}],
+    "@babel/plugin-transform-runtime",
+    "babel-plugin-styled-components"
+  ],
+  "presets": ["@babel/preset-react"]
 }
