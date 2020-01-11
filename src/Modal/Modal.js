@@ -122,6 +122,10 @@ const Modal = props => {
   React.useEffect(() => {
     if (open) document.body.style.overflow = 'hidden'
     else document.body.style = null
+
+    return () => {
+      document.body.style = null
+    }
   }, [open])
 
   if (!isRendered) return null
