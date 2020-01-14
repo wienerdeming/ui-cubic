@@ -25,9 +25,9 @@
     "type": "git"
   },
   "scripts": {
-    "start": "cross-env NODE_ENV=development parcel serve docs/index.html --open --out-dir build",
+    "start": "cross-env NODE_ENV=development parcel serve demo/index.html --open --out-dir build",
     "build": "rollup -c",
-    "build-demo": "cross-env NODE_ENV=production parcel build docs/index.html --out-dir demo"
+    "build-demo": "cross-env NODE_ENV=production parcel build demo/index.html --out-dir docs"
   },
   "dependencies": {
     "history": "^4.10.1",
