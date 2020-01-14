@@ -15,7 +15,6 @@ import Toasters from './Toasters'
 import Animation from './Animation'
 
 export const menuItems = {
-  Animation,
   Checkboxes,
   RadioButtons,
   Buttons,
@@ -24,6 +23,7 @@ export const menuItems = {
   Grid,
   Table,
   Modals,
+  Animation,
   Toasters
 }
 
@@ -48,7 +48,6 @@ const App = props => {
     <CubeThemeProvider>
       <Layout>
         <GlobalStyles />
-
         <NavBar
           menu={menu}
           onSelect={onSelect}

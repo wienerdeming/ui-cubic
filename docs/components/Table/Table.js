@@ -69,11 +69,6 @@ export default ({ ...props }) => {
                       <MenuListItem>
                         <Edit />Изменить
                       </MenuListItem>
-                      <MenuListItem>
-                        <div style={{ width: '350px' }}>
-                          asdasdasdasd
-                        </div>
-                      </MenuListItem>
                     </Dropdown>
                   </TableCol>
                 </TableRow>

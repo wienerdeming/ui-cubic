@@ -38,15 +38,15 @@ export default props => {
         <Input
           label={'Default input'}
           placeholder={'Input some text here'}
-          disabled={true}
+
         />
       </InputWrapper>
 
       <InputWrapper>
-        <IconInput
-          label={'Input with icon'}
-          placeholder={'Input with icon'}
-          icon={UserIcon}
+        <Input
+          label={'Disabled input'}
+          placeholder={'Input some text here'}
+          disabled={true}
         />
       </InputWrapper>
 

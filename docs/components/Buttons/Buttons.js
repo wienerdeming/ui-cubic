@@ -20,15 +20,7 @@ const Buttons = props => {
         <DangerButton style={buttonStyle}>Danger button</DangerButton>
         <Button loading={true} style={buttonStyle}>Loading button</Button>
       </div>
-      <br /><br /><br />
-      <Title>Table Titles</Title>
-      <Description>Sortable & simple titles</Description>
-      <div>
-        <SortingTitle title={'ФИО'} sorting={true} />
-        <SortingTitle title={'Наименование'} sorting={true} />
-        <SortingTitle title={'Статус'} />
-        <SortingTitle title={'Сумма'} />
-      </div>
-    </div>)
+    </div>
+  )
 }
 export default Buttons

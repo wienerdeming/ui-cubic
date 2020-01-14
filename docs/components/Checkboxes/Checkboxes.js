@@ -1,10 +1,19 @@
 import React from 'react'
 import Checkbox, { CheckboxGroup } from 'Checkbox'
 import { Title, Description } from '../Utils'
+import { Button } from 'Button'
+import styled from 'styled-components'
+
+const GroupWrapper = styled.div`
+  width: 300px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+`
 
 const Checkboxes = props => {
   const [value, setValue] = React.useState([])
 
+  const selectFirstTwo = () => setValue(['gr1', 'gr2'])
   return (
     <div>
       <Title>Checkboxes </Title>
@@ -13,19 +22,18 @@ const Checkboxes = props => {
       <Checkbox label={'Checkbox 3'} />
       <Checkbox label={'Checkbox 4'} />
 
-      <br /><br /><br /><br />
-      <div style={{ width: 300 }}>
-        <button onClick={() => setValue(['gr1', 'gr2'])}>asdasd</button>
+      <GroupWrapper>
         <CheckboxGroup
-          label={'Группы'}
-          mode={'inline'}
+          label="Groups"
+          mode="inline"
           value={value}
           onChange={values => values}>
           <Checkbox value={'gr1'} label={'Group 1'} />
           <Checkbox value={'gr2'} label={'Group 2'} />
           <Checkbox value={'gr3'} label={'Group 3'} />
         </CheckboxGroup>
-      </div>
+      </GroupWrapper>
+      <Button onClick={selectFirstTwo}>Select first two</Button>
     </div>
   )
 }
