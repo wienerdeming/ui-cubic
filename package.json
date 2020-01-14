@@ -25,11 +25,9 @@
     "type": "git"
   },
   "scripts": {
-    "build-roll": "rollup -c",
-    "start_rollup": "rollup -c -w",
     "start": "cross-env NODE_ENV=development parcel serve docs/index.html --open --out-dir build",
-    "build": "cross-env NODE_ENV=production  babel src/ --out-dir dist --plugins=@babel/plugin-transform-runtime,babel-plugin-styled-components --presets=@babel/preset-react",
-    "test": "cross-env NODE_ENV=testing cypress run"
+    "build": "rollup -c",
+    "build-demo": "cross-env NODE_ENV=production parcel build docs/index.html --out-dir demo"
   },
   "dependencies": {
     "history": "^4.10.1",
