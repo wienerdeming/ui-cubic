@@ -7,7 +7,7 @@ const InputLabel = styled.div`
   font-size: 13px;
   font-weight: 500;
   line-height: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
   text-transform: uppercase;
 `
 
