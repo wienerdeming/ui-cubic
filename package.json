@@ -1,6 +1,6 @@
 {
   "name": "ui-cubic",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "private": false,
   "keywords": [
     "components",
@@ -21,7 +21,7 @@
   ],
   "license": "MIT",
   "repository": {
-    "url": "https://github.com/wienerdeming/styled-crisp-ui",
+    "url": "https://github.com/wienerdeming/ui-cubic",
     "type": "git"
   },
   "scripts": {
