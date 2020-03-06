@@ -18,7 +18,7 @@ const TableCol = props => {
     if (sortKey && typeof onSort !== 'function') {
       console.warn('Please pass onSort function in order to sorting to work')
     }
-  }, [onSort, sortKey])
+  }, [])
 
   if (isBody) {
     return <Col {...rest}>{children}</Col>
