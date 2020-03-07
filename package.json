@@ -1,6 +1,6 @@
 {
   "name": "ui-cubic",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "private": false,
   "keywords": [
     "components",
@@ -34,6 +34,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-fast-compare": "^3.0.1",
     "react-select": "^3.0.8",
     "styled-components": "^4.4.1"
   },

@@ -48,9 +48,10 @@ const Dropdown = props => {
   useEffect(() => {
     document.addEventListener('click', handleClick)
     return () => {
+      isOpen && setIsOpen(false)
       document.removeEventListener('click', handleClick)
     }
-  })
+  }, [])
 
   return (
     <Root innerRef={wrapperRef} {...rest}>
