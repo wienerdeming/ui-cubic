@@ -45,6 +45,7 @@ export default props => {
       <InputWrapper>
         <Input
           label={'Disabled input'}
+          value={'dasdas'}
           placeholder={'Input some text here'}
           disabled={true}
         />

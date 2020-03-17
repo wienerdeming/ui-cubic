@@ -18,6 +18,7 @@ const Input = styled.input`
   :disabled {
     background-color: #fafbfc;
     pointer-events: none;
+    color: ${props => props.theme.input.labelColor};
   }
 
   ::placeholder {

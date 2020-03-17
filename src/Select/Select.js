@@ -69,6 +69,7 @@ const Select = props => {
     <SelectWrapper error={error}>
       <InputLabel>{label}</InputLabel>
       <ReactSelect
+
         ref={selectRef}
         options={options}
         classNamePrefix={'select'}

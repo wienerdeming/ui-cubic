@@ -14,6 +14,7 @@ const SelectWrapper = styled('div')`
 const Selects = props => {
   const [openModal, setOpenModal] = React.useState(false)
 
+
   const onOpenModal = () => setOpenModal(true)
   const onCloseModal = () => setOpenModal(false)
   return (
@@ -21,6 +22,20 @@ const Selects = props => {
       <Title>Selects</Title>
 
       <SelectWrapper>
+        <Select
+
+          label={'Disabled Simple Select'}
+          isDisabled={true}
+          options={[
+            { value: 'sun', label: 'Sun' },
+            { value: 'moon', label: 'Moon' },
+            { value: 'star', label: 'Star' },
+            { value: 'planet', label: 'Planet' },
+            { value: 'galaxy', label: 'Galaxy' }
+          ]}
+
+          defaultValue={{ value: 'moon', label: 'Moon' }}
+        />
         <Select
           label={'Creatable Select'}
           options={[
@@ -33,6 +48,8 @@ const Selects = props => {
           isCreatable={true}
           onCreate={onOpenModal}
         />
+
+
         <Select
           label={'Default Select ERROR'}
           type={'select'}

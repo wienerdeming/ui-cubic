@@ -1,15 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { createBrowserHistory } from 'history'
 import HMRLoading from './components/HMRLoading'
 
 const MOUNT_NODE = document.getElementById('app')
 
 const render = () => {
-  const history = createBrowserHistory()
   const App = require('./components/App').default
 
-  ReactDOM.render(<App history={history} />, MOUNT_NODE)
+  ReactDOM.render(<App />, MOUNT_NODE)
 }
 
 // ======================================================

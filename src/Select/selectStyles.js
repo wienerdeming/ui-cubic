@@ -1,24 +1,28 @@
+
 export default (theme, params) => ({
-  control: (provided, state) => ({
-    ...provided,
-    backgroundColor: state.isFocused ? 'white' : theme.input.backgroundColor,
-    boxShadow: null,
-    borderRadius: theme.input.borderRadius,
-    borderColor: state.isFocused
-      ? params.error
-        ? `${theme.cube.colorRed} !important`
-        : theme.cube.primaryColor
-      : 'transparent',
-    transition: theme.cube.transition,
-    height: params.height,
-    minHeight: params.height ? 'unset' : '52px',
-    '&:hover': {
-      backgroundColor: state.isFocused
-        ? 'white'
-        : theme.input.backgroundColorHover,
-      borderColor: state.isFocused ? theme.cube.primaryColor : 'transparent'
-    }
-  }),
+  control: (provided, state) => {
+    const backgroundColor = state.isDisabled ? '#fafbfc' : state.isFocused ? 'white' : theme.input.backgroundColor
+    return ({
+      ...provided,
+      backgroundColor,
+      boxShadow: null,
+      borderRadius: theme.input.borderRadius,
+      borderColor: state.isFocused
+        ? params.error
+          ? `${theme.cube.colorRed} !important`
+          : theme.cube.primaryColor
+        : 'transparent',
+      transition: theme.cube.transition,
+      height: params.height,
+      minHeight: params.height ? 'unset' : '52px',
+      '&:hover': {
+        backgroundColor: state.isFocused
+          ? 'white'
+          : theme.input.backgroundColorHover,
+        borderColor: state.isFocused ? theme.cube.primaryColor : 'transparent'
+      }
+    })
+  },
   indicatorSeparator: () => ({}),
   loadingIndicator: (provided, state) => ({
     ...provided,
@@ -90,11 +94,14 @@ export default (theme, params) => ({
       padding: isMultiWithValues ? '4px' : '0 20px'
     }
   },
-  singleValue: provided => ({
-    ...provided,
-    fontSize: '15px',
-    color: 'inherit'
-  }),
+  singleValue: (provided, state) => {
+    const color = state.isDisabled ? theme.input.labelColor : 'inherit'
+    return ({
+      ...provided,
+      fontSize: '15px',
+      color
+    })
+  },
   placeholder: provided => ({
     ...provided,
     color: theme.input.placeholderColor,
@@ -112,12 +119,14 @@ export default (theme, params) => ({
 
   multiValue: (provided, state) => {
     const hasValueFocused = state.hasValue && params.menuIsOpen
+    const borderColor = state.isDisabled ? theme.input.borderColor : 'transparent'
     return {
       ...provided,
       backgroundColor: hasValueFocused
         ? theme.input.backgroundColor
         : '#FAFBFB',
       border: '1px solid transparent',
+      borderColor,
       borderRadius: theme.input.borderRadius,
       transition: theme.cube.transition,
       margin: '4px',
