@@ -5,20 +5,20 @@ import BaseButton from './BaseButton'
 
 const BorderedButton = styled(BaseButton)`
   background: transparent;
-  color: ${props => props.theme.cube.primaryColor};
+  color: ${props => props.theme.cube.palette?.primary?.main || props.theme.cube.primaryColor};
 
   &:focus {
-    background: ${props => props.theme.cube.primaryColor};
-    color: #fff;
+//    background: ${props => props.theme.cube.primaryColor};
+ //   color: #fff;
   }
 
   &:hover {
-    background: ${props => colorConversion(props.theme.cube.primaryColor, -16)};
+    background: ${props => props.theme.cube.palette?.primary?.hover || colorConversion(props.theme.cube.primaryColor, -16)};
     color: #fff;
   }
 
   :active {
-    background: ${props => props.theme.cube.primaryColor};
+    background: ${props => props.theme.cube.palette?.primary?.active || props.theme.cube.primaryColor};
   }
 `
 

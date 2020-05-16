@@ -47,7 +47,7 @@ const TableRowHeader = props => {
   const indeterminate = !isEmpty(checkedList) && list.length !== checkedList.length
   if (selection) {
     return (
-      <CheckboxRow gutter={gutter}>
+      <CheckboxRow gutter={gutter} {...rest}>
         <Checkbox
           checked={checked}
           indeterminate={indeterminate}

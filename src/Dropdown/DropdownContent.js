@@ -10,9 +10,9 @@ const POSITION_BOTTOM = 'bottom'
 
 const MenuList = styled('div')`
   background: #fff;
-  border: 1px solid ${props => props.theme.input.borderColor};
-  border-radius: ${props => props.theme.input.borderRadius};
-  box-shadow: ${props => props.theme.cube.boxShadow};
+  border: 1px solid ${props => props.theme.cube.input?.colors?.border || props.theme.input.borderColor};
+  border-radius: ${props => props.theme.cube.borderRadius?.md || props.theme.input.borderRadius};
+  box-shadow: ${props => props.theme.cube.shadows?.md || props.theme.cube.boxShadow};
   padding: 7px;
   opacity: ${props => (props.fadeType === 'in' ? '1' : '0')};
   visibility: ${props => (props.fadeType === 'in' ? 'visible' : 'hidden')};

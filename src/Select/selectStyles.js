@@ -1,16 +1,20 @@
 
 export default (theme, params) => ({
   control: (provided, state) => {
-    const backgroundColor = state.isDisabled ? '#fafbfc' : state.isFocused ? 'white' : theme.input.backgroundColor
+    const backgroundColor = state.isDisabled
+      ? '#fafbfc'
+      : state.isFocused
+        ? 'white'
+        : theme.cube.input?.colors.background || theme.input.backgroundColor
     return ({
       ...provided,
       backgroundColor,
       boxShadow: null,
-      borderRadius: theme.input.borderRadius,
+      borderRadius: theme.cube.borderRadius?.md || theme.input.borderRadius,
       borderColor: state.isFocused
         ? params.error
-          ? `${theme.cube.colorRed} !important`
-          : theme.cube.primaryColor
+          ? `${theme.cube.palette?.danger?.main || theme.cube.colorRed} !important`
+          : (theme.cube.palette?.primary?.main || theme.cube.primaryColor)
         : 'transparent',
       transition: theme.cube.transition,
       height: params.height,
@@ -18,8 +22,8 @@ export default (theme, params) => ({
       '&:hover': {
         backgroundColor: state.isFocused
           ? 'white'
-          : theme.input.backgroundColorHover,
-        borderColor: state.isFocused ? theme.cube.primaryColor : 'transparent'
+          : theme.cube.input?.colors?.hover || theme.input.backgroundColorHover,
+        borderColor: state.isFocused ? (theme.cube.palette?.primary?.main || theme.cube.primaryColor) : 'transparent'
       }
     })
   },
@@ -28,15 +32,15 @@ export default (theme, params) => ({
     ...provided,
     '& span': {
       background: state.isFocused
-        ? theme.input.labelColor
-        : theme.input.placeholderColor
+        ? (theme.cube.input?.colors?.label || theme.input.labelColor)
+        : (theme.cube.input?.colors?.placeholder || theme.input.placeholderColor)
     }
   }),
   clearIndicator: provided => ({
     ...provided,
-    color: theme.input.placeholderColor,
+    color: theme.cube.input?.colors?.placeholder || theme.input.placeholderColor,
     '&:hover': {
-      color: theme.input.labelColor
+      color: theme.cube.input?.colors?.label || theme.input.labelColor
     }
   }),
   dropdownIndicator: (provided, state) => ({
@@ -44,14 +48,14 @@ export default (theme, params) => ({
     alignItems: 'center',
     color: state.isFocused
       ? params.error
-        ? `${theme.cube.colorRed} !important`
-        : theme.cube.primaryColor
-      : theme.input.placeholderColor,
+        ? `${theme.cube.palette?.danger?.main || theme.cube.colorRed} !important`
+        : (theme.cube.palette?.primary?.main || theme.cube.primaryColor)
+      : (theme.cube.input?.colors?.placeholder || theme.input.placeholderColor),
     padding: '0 12px',
     transition: 'color 300ms, transform 150ms',
     transform: params.menuIsOpen ? 'rotate(180deg)' : 'rotate(0)',
     '&:hover': {
-      color: theme.input.labelColor
+      color: theme.cube.input?.colors?.label || theme.input.labelColor
     }
   }),
   menuPortal: provided => ({
@@ -61,9 +65,9 @@ export default (theme, params) => ({
   menu: provided => ({
     ...provided,
     border: '1px solid',
-    borderColor: theme.input.borderColor,
-    boxShadow: theme.cube.boxShadow,
-    borderRadius: theme.input.borderRadius,
+    borderColor: theme.cube.input?.colors?.border || theme.input.borderColor,
+    boxShadow: theme.cube.shadows?.md ||theme.cube.boxShadow,
+    borderRadius: theme.cube.borderRadius?.md || theme.input.borderRadius,
     margin: '0',
     top: 'calc(100% + 4px)'
   }),
@@ -78,7 +82,7 @@ export default (theme, params) => ({
       : state.isFocused
         ? '#F5F6FD'
         : 'none',
-    borderRadius: theme.input.borderRadius,
+    borderRadius: theme.cube.borderRadius?.md || theme.input.borderRadius,
     color: 'inherit',
     cursor: 'pointer',
     padding: '12px',
@@ -95,7 +99,7 @@ export default (theme, params) => ({
     }
   },
   singleValue: (provided, state) => {
-    const color = state.isDisabled ? theme.input.labelColor : 'inherit'
+    const color = state.isDisabled ? (theme.cube.input?.colors?.label || theme.input.labelColor) : 'inherit'
     return ({
       ...provided,
       fontSize: '15px',
@@ -104,34 +108,34 @@ export default (theme, params) => ({
   },
   placeholder: provided => ({
     ...provided,
-    color: theme.input.placeholderColor,
+    color: theme.cube.input?.colors?.placeholder || theme.input.placeholderColor,
     fontSize: '15px',
     margin: '0'
   }),
   noOptionsMessage: provided => ({
     ...provided,
-    color: theme.input.placeholderColor
+    color: theme.cube.input?.colors?.placeholder || theme.input.placeholderColor
   }),
   loadingMessage: provided => ({
     ...provided,
-    color: theme.input.placeholderColor
+    color: theme.cube.input?.colors?.placeholder || theme.input.placeholderColor
   }),
 
   multiValue: (provided, state) => {
     const hasValueFocused = state.hasValue && params.menuIsOpen
-    const borderColor = state.isDisabled ? theme.input.borderColor : 'transparent'
+    const borderColor = state.isDisabled ? (theme.cube.input?.colors?.border || theme.input.borderColor) : 'transparent'
     return {
       ...provided,
       backgroundColor: hasValueFocused
-        ? theme.input.backgroundColor
+        ? theme.cube.input?.colors?.background || theme.input.backgroundColor
         : '#FAFBFB',
       border: '1px solid transparent',
       borderColor,
-      borderRadius: theme.input.borderRadius,
+      borderRadius: theme.cube.borderRadius?.md || theme.input.borderRadius,
       transition: theme.cube.transition,
       margin: '4px',
       '&:hover': {
-        borderColor: theme.input.borderColor
+        borderColor: theme.cube.input?.colors?.border || theme.input.borderColor
       }
     }
   },
@@ -146,7 +150,7 @@ export default (theme, params) => ({
     ...provided,
     alignSelf: 'center',
     borderRadius: '50%',
-    color: theme.input.placeholderColor,
+    color: theme.cube.input?.colors?.placeholder || theme.input.placeholderColor,
     cursor: 'pointer',
     justifyContent: 'center',
     paddingLeft: '0',

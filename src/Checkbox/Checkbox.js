@@ -11,11 +11,11 @@ const StyledCheckMark = styled(CheckMark)`
   ${props =>
     props.indeterminate &&
     css`
-      border-color: ${props => props.theme.cube.primaryColor};
+      border-color: ${props => props.theme.cube.palette?.primary?.main || props.theme.cube.primaryColor};
     `}
   :after {
     border-style: solid;
-    border-color: ${props => props.theme.cube.primaryColor};
+    border-color: ${props => props.theme.cube.palette?.primary?.main || props.theme.cube.primaryColor};
     border-width: 0 2px 2px 0;
     height: 7px;
     transform: rotate(45deg) scale(0);
@@ -25,7 +25,7 @@ const StyledCheckMark = styled(CheckMark)`
     ${props =>
     props.indeterminate &&
       css`
-        background: ${props => props.theme.cube.primaryColor};
+        background: ${props => props.theme.cube.palette?.primary?.main || props.theme.cube.primaryColor};
         border: none;
         opacity: 1;
         transform: scale(1);

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const InputLabel = styled.div`
-  color: ${props => props.theme.input.labelColor};
+  color: ${props => props.theme.cube.input?.colors?.label || props.theme.input.labelColor};
   display: ${props => (props.children ? 'block' : 'none')};
   font-size: 13px;
   font-weight: 500;

@@ -15,6 +15,7 @@ import { Dropdown, MenuListItem as DropdownItem } from './Dropdown'
 import Modal from './Modal'
 import Toaster from './Toaster'
 import Loader from './Loader'
+import AnimationWrapper from './AnimationWrapper'
 
 export {
   Input,
@@ -44,5 +45,6 @@ export {
   DropdownItem,
   Modal,
   Toaster,
-  Loader
+  Loader,
+  AnimationWrapper
 }

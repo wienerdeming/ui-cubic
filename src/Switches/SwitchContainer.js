@@ -15,7 +15,7 @@ export default styled.label`
     margin-bottom: 0;
   }
   :hover ${CheckMark} {
-    border-color: ${props => props.theme.cube.primaryColor};
+    border-color: ${props => props.theme.cube.palette?.primary?.main || props.theme.cube.primaryColor};
   }
   ${props =>
     props.disabled &&

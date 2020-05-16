@@ -6,8 +6,8 @@ import { components } from 'react-select'
 const CreateButton = styled('div')`
   background-color: #fafbfc;
   border: 1px dashed #dee0e5;
-  border-radius: ${props => props.theme.input.borderRadius};
-  color: ${props => props.theme.cube.primaryColor};
+  border-radius: ${props => props.theme.cube.borderRadius?.md || props.theme.input.borderRadius};
+  color: ${props => props.theme.cube.palette?.primary?.main || props.theme.cube.primaryColor};
   cursor: pointer;
   font-size: 15px;
   margin: 12px;
@@ -15,7 +15,7 @@ const CreateButton = styled('div')`
   text-align: center;
   transition: ${props => props.theme.cube.transition};
   &:hover {
-    background-color: ${props => props.theme.input.backgroundColor};
+    background-color: ${props => props.theme.cube.input?.colors.background || props.theme.input.backgroundColor};
   }
 `
 

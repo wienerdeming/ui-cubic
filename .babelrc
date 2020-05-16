@@ -2,7 +2,8 @@
   "plugins": [
     ["module-resolver", {"root": ["./src"]}],
     "@babel/plugin-transform-runtime",
-    "babel-plugin-styled-components"
+    "babel-plugin-styled-components",
+    "@babel/plugin-proposal-optional-chaining"
   ],
   "presets": ["@babel/preset-react"]
 }

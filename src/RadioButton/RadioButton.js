@@ -6,7 +6,7 @@ import { SwitchContainer, SwitchInput, CheckMark } from '../Switches'
 const RadioCheckMark = styled(CheckMark)`
   border-radius: 50%;
   :after {
-    background: ${props => props.theme.cube.primaryColor};
+    background: ${props => props.theme.cube.palette?.primary?.main || props.theme.cube.primaryColor};
     border-radius: 50%;
     transform: scale(0);
     top: 5px;
@@ -16,7 +16,7 @@ const RadioCheckMark = styled(CheckMark)`
     ${props =>
     props.error &&
       css`
-        background: ${props => props.theme.cube.colorRed};
+        background: ${props => props.theme.cube.palette?.danger?.main || props.theme.cube.colorRed};
       `}
   }
 `

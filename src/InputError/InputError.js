@@ -4,8 +4,8 @@ import styled from 'styled-components'
 
 const Error = styled.div`
   background-color: #ffe2e9;
-  border-radius: ${props => props.theme.input.borderRadius};
-  color: ${props => props.theme.cube.colorRed};
+  border-radius: ${props => props.theme.cube.borderRadius?.md || props.theme.input.borderRadius};
+  color: ${props => props.theme.cube.palette?.danger?.main || props.theme.cube.colorRed};
   font-size: 13px;
   margin-top: 8px;
   padding: 8px 20px;

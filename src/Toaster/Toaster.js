@@ -8,16 +8,16 @@ import Check from './Check'
 
 const getIconBackground = props => {
   switch (props.type) {
-    case toasterTypes.SUCCESS: return props.theme.cube.primaryColor
+    case toasterTypes.SUCCESS: return props.theme.cube.palette?.primary?.main || props.theme.cube.primaryColor
     case toasterTypes.WARNING: return props.theme.cube.colorYellow
-    case toasterTypes.ERROR: return props.theme.cube.colorRed
+    case toasterTypes.ERROR: return props.theme.cube.palette?.danger?.main || props.theme.cube.colorRed
     default: return 'none'
   }
 }
 
 const IconContainer = styled('div')`
   align-items: center;
-  background-color: ${props => props.theme.cube.primaryColor};
+  background-color: ${props => props.theme.cube.palette?.primary?.main || props.theme.cube.primaryColor};
   display: flex;
   justify-content: center;
   min-width: 52px;

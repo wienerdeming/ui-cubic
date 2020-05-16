@@ -1,6 +1,6 @@
 {
   "name": "ui-cubic",
-  "version": "0.4.6",
+  "version": "0.4.8",
   "private": false,
   "keywords": [
     "components",
@@ -47,6 +47,7 @@
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-optional-chaining": "^7.9.0",
     "@babel/plugin-transform-runtime": "^7.7.6",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.7.4",

@@ -3,6 +3,7 @@
 
 // Darken colorConversion("#F06D06", -20)
 
+export const get = item => typeof item !== 'undefined'
 export const colorConversion = (hexColor, contrast) => {
   let usePound = false
   if (hexColor[0] === '#') {

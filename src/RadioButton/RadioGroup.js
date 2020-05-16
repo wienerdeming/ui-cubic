@@ -9,7 +9,7 @@ const Fieldset = styled.fieldset`
 `
 
 const RadioGroup = ({ children, onChange, ...props }) => {
-  const onClick = ev => onChange && onChange(ev.target.value, event)
+  const onClick = ev => onChange && onChange(ev.target.value, ev)
   return (
     <Fieldset onChange={onClick}>
       {React.Children.map(children, (child, key) => {

@@ -7,7 +7,7 @@ export default styled.div`
     props.error &&
     css`
       & ${InputLabel} {
-        color: ${props => props.theme.cube.colorRed + '!important'};
+        color: ${props => props.theme.cube.palette?.danger?.main || props.theme.cube.colorRed + '!important'};
       }
     `}
 `

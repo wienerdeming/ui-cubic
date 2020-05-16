@@ -41,11 +41,61 @@ const Layout = styled.div`
   min-height: 100%;
 `
 
+const theme = {
+  shadows: {
+    sm: '',
+    md: '0px 4px 15px rgba(211, 216, 224, 0.5)',
+    lg: ''
+  },
+  borderRadius: {
+    sm: '5px',
+    md: '10px',
+    lg: ''
+  },
+
+  palette: {
+    primary: {
+      main: '#2F80ED',
+      light: '#e0ecfc',
+      dark: '',
+      hover: '#2F73DF',
+      active: '#2F80ED',
+      focus: ''
+    },
+    secondary: {
+      main: '',
+      light: '',
+      dark: '',
+      hover: '',
+      active: '',
+      focus: ''
+
+    },
+    danger: {
+      main: '',
+      light: '',
+      dark: '',
+      hover: '',
+      active: '',
+      focus: ''
+
+    }
+  },
+  input: {
+    colors: {
+      background: '',
+      hover: '',
+      label: '',
+      placeholder: '',
+      border: ''
+    }
+  }
+}
 const App = props => {
   const [menu, onSelect] = React.useState('Checkboxes')
   const Component = menuItems[menu]
   return (
-    <CubeThemeProvider>
+    <CubeThemeProvider theme={theme}>
       <Layout>
         <GlobalStyles />
         <NavBar

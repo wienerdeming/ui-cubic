@@ -4,18 +4,18 @@ import { colorConversion } from '../utils'
 import BaseButton from './BaseButton'
 
 const Button = styled(BaseButton)`
-  background: ${props => props.theme.cube.primaryColor};
+  background: ${props => props.theme.cube.palette?.primary?.main ||  props.theme.cube.primaryColor};
   color: #fff;
   &:focus {
-    background: ${props => props.theme.cube.primaryColor};
+    background: ${props => props.theme.cube.palette?.primary?.main || props.theme.cube.primaryColor};
   }
 
   &:hover {
-    background: ${props => colorConversion(props.theme.cube.primaryColor, -16)};
+    background: ${props => props.theme.cube.palette?.primary?.hover || colorConversion(props.theme.cube.primaryColor, -16)};
   }
 
   &:active {
-    background: ${props => props.theme.cube.primaryColor};
+    background: ${props => props.theme.cube.palette?.primary?.active || props.theme.cube.primaryColor};
   }
 `
 

@@ -41,7 +41,7 @@ const StyledSpinner = styled('svg')`
 
 const StyledPath = styled('circle')`
   animation: ${dash} 1.5s ease-in-out infinite;
-  stroke: ${props => props.color || props.theme.cube.primaryColor};
+  stroke: ${props => props.color || (props.theme.cube.palette?.primary?.main || props.theme.cube.primaryColor)};
   stroke-linecap: round;
 `
 

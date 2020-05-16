@@ -22,6 +22,6 @@ export default styled.span`
     props.error &&
     css`
       background: #ffecf1 !important;
-      border-color: ${props => props.theme.cube.colorRed} !important;
+      border-color: ${props => props.theme.cube.palette?.danger?.main || props.theme.cube.colorRed} !important;
     `}
 `
