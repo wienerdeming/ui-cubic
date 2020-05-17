@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {forwardRef} from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 import {
@@ -52,16 +52,16 @@ const SwitchContainer = styled(SwitchContainerUI)`
       padding-left: 18px;
     `}
 `
-const Checkbox = ({ onChange, ...props }) => {
+const Checkbox = forwardRef(({ onChange, ...props }, ref) => {
   const onChecked = ev => onChange && onChange(ev.target.checked, ev)
   return (
     <SwitchContainer disabled={props.disabled} label={props.label} {...props}>
       {props.label}
-      <StyledInput {...props} onChange={onChecked} type={'checkbox'} />
+      <StyledInput ref={ref} {...props} onChange={onChecked} type={'checkbox'} />
       <StyledCheckMark indeterminate={props.indeterminate} />
     </SwitchContainer>
   )
-}
+})
 
 Checkbox.propTypes = {
   label: PropTypes.string,
