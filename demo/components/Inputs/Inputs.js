@@ -45,7 +45,7 @@ export default props => {
       <InputWrapper>
         <Input
           label={'Disabled input'}
-          value={'dasdas'}
+          value={'Disabled'}
           placeholder={'Input some text here'}
           disabled={true}
         />
@@ -63,7 +63,7 @@ export default props => {
         <Input
           label={'Error input'}
           placeholder={'Input some text here'}
-          error={'Заполните это поле!'}
+          error={'This field is required.'}
         />
       </InputWrapper>
 
@@ -79,7 +79,7 @@ export default props => {
         <Title>Text area</Title>
         <TextArea
           label={'Comments'}
-          placeholder={'Bla bla'}
+          placeholder={'Add your comment'}
         />
       </SelectWrapper>
     </div>

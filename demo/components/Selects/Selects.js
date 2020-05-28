@@ -23,7 +23,6 @@ const Selects = props => {
 
       <SelectWrapper>
         <Select
-
           label={'Disabled Simple Select'}
           isDisabled={true}
           options={[
@@ -33,9 +32,9 @@ const Selects = props => {
             { value: 'planet', label: 'Planet' },
             { value: 'galaxy', label: 'Galaxy' }
           ]}
-
           defaultValue={{ value: 'moon', label: 'Moon' }}
         />
+
         <Select
           label={'Creatable Select'}
           options={[
@@ -53,7 +52,7 @@ const Selects = props => {
         <Select
           label={'Default Select ERROR'}
           type={'select'}
-          error={'ahahahahahah'}
+          error={'This field is required.'}
           options={[
             { value: 1, label: 'Apple' },
             { value: 2, label: 'Banana' },
