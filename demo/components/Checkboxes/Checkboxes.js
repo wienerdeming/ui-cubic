@@ -13,7 +13,12 @@ const GroupWrapper = styled.div`
 const Checkboxes = props => {
   const [value, setValue] = React.useState([])
 
-  const selectFirstTwo = () => setValue(['gr1', 'gr2'])
+  const selectFirstTwo = () => {
+      const items = value.length ? [] : ['gr1', 'gr2']
+      setValue(items)
+  }
+
+
   return (
     <div>
       <Title>Checkboxes </Title>

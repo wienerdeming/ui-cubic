@@ -10,12 +10,6 @@ import MenuList from './MenuList'
 const withTheme = require('styled-components').withTheme
 const css = require('styled-components').css
 
-const options = [
-  // { value: 'cherry', label: 'Cherry' },
-  // { value: 'banana', label: 'Banana' },
-  // { value: 'apple', label: 'Apple' }
-]
-
 const SelectWrapper = styled('div')`
   ${({ error }) => error && css`
     & ${InputLabel} {
@@ -69,9 +63,7 @@ const Select = props => {
     <SelectWrapper error={error}>
       <InputLabel>{label}</InputLabel>
       <ReactSelect
-
         ref={selectRef}
-        options={options}
         classNamePrefix={'select'}
         styles={selectStyles(theme, {
           error,

@@ -11,6 +11,7 @@ const Menu = styled.div`
 
 const MenuItem = styled.div`
   padding: 17px 27px;
+  margin-bottom: 10px;
   color: #BABABA;
   cursor: pointer;
   border-radius: 25px;
