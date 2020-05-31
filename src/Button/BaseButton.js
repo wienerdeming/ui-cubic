@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {forwardRef} from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Loader from '../Loader'
@@ -31,7 +31,7 @@ const StyledLoader = styled(Loader)`
   margin-left: 5px;
 `
 
-const Button = props => {
+const Button = forwardRef((props, ref) => {
   const {
     children,
     loading,
@@ -41,14 +41,14 @@ const Button = props => {
 
   const isDisabled = disabled || loading
   return (
-    <BaseButton disabled={isDisabled} {...defaultProps}>
+    <BaseButton ref={ref} disabled={isDisabled} {...defaultProps}>
       {children}
       {loading && (
         <StyledLoader size={18} color={'currentColor'} />
       )}
     </BaseButton>
   )
-}
+})
 
 Button.propTypes = {
   children: PropTypes.node,

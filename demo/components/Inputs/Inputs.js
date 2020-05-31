@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import styled from 'styled-components'
 import { Input, IconInput } from 'Input'
 import TextArea from '../../../src/TextArea'
@@ -31,11 +31,16 @@ const CustomStyleInput = styled(IconInput)`
 `
 
 export default props => {
+
+  const ref = useRef(null)
+  console.warn(ref)
+  const onTarget = () => console.warn(ref.current)
   return (
     <div>
-      <Title>Inputs</Title>
+      <Title onClick={onTarget}>Inputs</Title>
       <InputWrapper>
         <Input
+
           label={'Default input'}
           placeholder={'Input some text here'}
 
@@ -53,6 +58,7 @@ export default props => {
 
       <InputWrapper>
         <IconInput
+          ref={ref}
           label={'Input with icon'}
           placeholder={'Input with icon'}
           icon={UserIcon}

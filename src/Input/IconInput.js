@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {forwardRef} from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import InputLabel from '../InputLabel'
@@ -20,7 +20,7 @@ const InputIcon = icon => styled(icon)`
   transform: translateY(-50%);
 `
 
-const StyledInput = styled(props => <InputBase {...props} />)`
+const StyledInput = styled(forwardRef((props, ref) => <InputBase {...props} ref={ref}/>))`
   padding-left: 50px;
   :focus + svg {
     color: ${props =>
@@ -30,19 +30,19 @@ const StyledInput = styled(props => <InputBase {...props} />)`
   }
 `
 
-const IconInput = ({ icon, label, ...props }) => {
+const IconInput = forwardRef(({ icon, label, ...props }, ref) => {
   const Icon = InputIcon(icon)
   return (
     <StyledWrapper error={props.error}>
       <InputLabel>{label}</InputLabel>
       <InputWrapper>
-        <StyledInput {...props} />
+        <StyledInput {...props} ref={ref}/>
         <Icon />
       </InputWrapper>
       <InputError>{props.error}</InputError>
     </StyledWrapper>
   )
-}
+})
 
 IconInput.propTypes = {
   icon: PropTypes.func.isRequired,

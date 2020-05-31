@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {forwardRef} from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 import { SwitchContainer, SwitchInput, CheckMark } from '../Switches'
@@ -27,15 +27,15 @@ const StyledInput = styled(SwitchInput)`
   }
 `
 
-const RadioButton = ({ label, ...props }) => {
+const RadioButton = forwardRef(({ label, ...props }, ref) => {
   return (
     <SwitchContainer disabled={props.disabled}>
       {label}
-      <StyledInput {...props} type={'radio'} />
+      <StyledInput ref={ref} {...props} type={'radio'} />
       <RadioCheckMark />
     </SwitchContainer>
   )
-}
+})
 
 RadioButton.propTypes = {
   label: PropTypes.string.isRequired,

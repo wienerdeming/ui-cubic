@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {forwardRef} from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
@@ -42,15 +42,15 @@ const Input = styled.input`
   }
 `
 
-const InputBase = ({ onKeyPress, onEnter, ...props }) => {
+const InputBase = forwardRef(({ onKeyPress, onEnter, ...props }, ref) => {
   const onPress = ev => {
     if (onEnter && ev.key === 'Enter') {
       return onEnter(ev, ev.target.value)
     }
     return onKeyPress && onKeyPress(ev, ev.target.value)
   }
-  return <Input {...props} onKeyPress={onPress} />
-}
+  return <Input {...props} onKeyPress={onPress} ref={ref}/>
+})
 
 InputBase.propTypes = {
   onKeyPress: PropTypes.func,

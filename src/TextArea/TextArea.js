@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {forwardRef} from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 import InputLabel from '../InputLabel'
@@ -47,7 +47,7 @@ const TextArea = styled('textarea')`
   }
 `
 
-const TextAreaCUI = ({ children, label, error, ...rest }) => {
+const TextAreaCUI = forwardRef(({ children, label, error, ...rest }, ref) => {
   const onChange = event => {
     if (typeof rest.onChange === 'function') {
       rest.onChange(event)
@@ -56,11 +56,11 @@ const TextAreaCUI = ({ children, label, error, ...rest }) => {
   return (
     <Container error={error}>
       <InputLabel>{label}</InputLabel>
-      <TextArea {...rest} error={error} onChange={onChange} />
+      <TextArea ref={ref} {...rest} error={error} onChange={onChange} />
       <InputError>{error}</InputError>
     </Container>
   )
-}
+})
 
 TextAreaCUI.propTypes = {
   children: PropTypes.node,

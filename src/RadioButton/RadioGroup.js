@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {forwardRef} from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
@@ -8,16 +8,16 @@ const Fieldset = styled.fieldset`
   padding: 0;
 `
 
-const RadioGroup = ({ children, onChange, ...props }) => {
+const RadioGroup = forwardRef(({ children, onChange, ...props }, ref) => {
   const onClick = ev => onChange && onChange(ev.target.value, ev)
   return (
-    <Fieldset onChange={onClick}>
+    <Fieldset ref={ref} onChange={onClick}>
       {React.Children.map(children, (child, key) => {
         return <child.type key={key} {...child.props} name={props.name} />
       })}
     </Fieldset>
   )
-}
+})
 
 RadioGroup.propTypes = {
   onChange: PropTypes.func,
