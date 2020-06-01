@@ -20,7 +20,7 @@ const InputIcon = icon => styled(icon)`
   transform: translateY(-50%);
 `
 
-const StyledInput = styled(forwardRef((props, ref) => <InputBase {...props} ref={ref}/>))`
+const StyledInput = styled(InputBase)`
   padding-left: 50px;
   :focus + svg {
     color: ${props =>

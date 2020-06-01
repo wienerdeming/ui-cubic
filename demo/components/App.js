@@ -87,7 +87,7 @@ const theme = {
       hover: '',
       label: '',
       placeholder: '',
-      border: ''
+      border: '#e0e0e0'
     }
   }
 }

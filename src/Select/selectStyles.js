@@ -15,7 +15,7 @@ export default (theme, params) => ({
         ? params.error
           ? `${theme.cube.palette?.danger?.main || theme.cube.colorRed} !important`
           : (theme.cube.palette?.primary?.main || theme.cube.primaryColor)
-        : 'transparent',
+        : theme.cube.input.colors.border || 'transparent',
       transition: theme.cube.transition,
       height: params.height,
       minHeight: params.height ? 'unset' : '52px',
