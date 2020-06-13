@@ -21,12 +21,20 @@ const CreateButton = styled('div')`
 
 const MenuList = props => {
   const { isCreatable, onCreate, selectProps, selectRef } = props
-  const onCreateNew = () => {
+  console.warn(selectRef)
+
+  const onCreateNew = (ev) => {
+
     selectProps.onMenuClose()
     if (selectRef.current) {
-      selectRef.current.select.inputRef.blur()
+      if(selectRef.current.select.select){
+        selectRef.current.select.select.blur()
+      }else {
+        selectRef.current.select.blur()
+
+      }
     }
-    if (onCreate) onCreate()
+    if (onCreate) onCreate(ev)
   }
 
   return (

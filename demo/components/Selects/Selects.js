@@ -1,5 +1,5 @@
 import React from 'react'
-import Select from 'Select'
+import {Select, SelectCreatable} from 'Select'
 import Modal from 'Modal'
 import styled from 'styled-components'
 import { Title } from '../Utils'
@@ -35,8 +35,19 @@ const Selects = props => {
           defaultValue={{ value: 'moon', label: 'Moon' }}
         />
 
+        <SelectCreatable
+          label={'Creatable Select Default'}
+          options={[
+            { value: 'sun', label: 'Sun' },
+            { value: 'moon', label: 'Moon' },
+            { value: 'star', label: 'Star' },
+            { value: 'planet', label: 'Planet' },
+            { value: 'galaxy', label: 'Galaxy' }
+          ]}
+        />
+
         <Select
-          label={'Creatable Select'}
+          label={'Creatable Select Custom'}
           options={[
             { value: 'sun', label: 'Sun' },
             { value: 'moon', label: 'Moon' },

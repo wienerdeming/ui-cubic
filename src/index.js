@@ -10,7 +10,7 @@ import RadioGroup from './RadioButton/RadioGroup'
 import Box from './Box'
 import { Row, Col } from './Grid'
 import { Table, TableCol, TableRow, TableHeader, TableBody } from './Table'
-import Select from './Select'
+import {Select, SelectCreatable} from './Select'
 import { Dropdown, MenuListItem as DropdownItem } from './Dropdown'
 import Modal from './Modal'
 import Toaster from './Toaster'
@@ -41,6 +41,7 @@ export {
   TableCol,
   Box,
   Select,
+  SelectCreatable,
   Dropdown,
   DropdownItem,
   Modal,

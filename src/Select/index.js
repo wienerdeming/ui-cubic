@@ -1,3 +1,4 @@
 import Select from './Select'
+import SelectCreatable from './SelectCreatable'
 
-export default Select
+export {Select, SelectCreatable}

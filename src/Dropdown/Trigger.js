@@ -47,7 +47,7 @@ const Container = styled(({ innerRef, isOpen, ...props }) => (
     props.isOpen && css`
       background: ${props => props.color || '#fff'};
       & ${Dot} {
-        background: ${props => props.theme.cube.palette.primary.main || props.theme.cube.primaryColor};
+        background: ${props => props.theme.cube.palette?.primary?.main || props.theme.cube.primaryColor};
       }
     `}
 `

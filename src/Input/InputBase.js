@@ -6,7 +6,7 @@ const Input = styled.input`
 ${props => console.warn(props)};
   background: ${props => props.theme.cube.input?.colors?.background || props.theme.input.backgroundColor};
   border-radius: ${props => props.theme.cube.borderRadius?.md || props.theme.input.borderRadius};
-  border: 1px solid ${props => props.theme.cube.input.colors.border || 'transparent'};
+  border: 1px solid ${props => props.theme.cube.input?.colors?.border || 'transparent'};
   color: inherit;
   font-size: 15px;
   font-family: inherit;
