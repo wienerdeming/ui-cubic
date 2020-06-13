@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const Input = styled.input`
-${props => console.warn(props)};
   background: ${props => props.theme.cube.input?.colors?.background || props.theme.input.backgroundColor};
   border-radius: ${props => props.theme.cube.borderRadius?.md || props.theme.input.borderRadius};
   border: 1px solid ${props => props.theme.cube.input?.colors?.border || 'transparent'};
