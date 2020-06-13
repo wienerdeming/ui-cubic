@@ -33,7 +33,7 @@ const CustomStyleInput = styled(IconInput)`
 export default props => {
 
   const ref = useRef(null)
-  console.warn(ref)
+
   const onTarget = () => console.warn(ref.current)
   return (
     <div>

@@ -15,13 +15,12 @@ const CreateButton = styled('div')`
   text-align: center;
   transition: ${props => props.theme.cube.transition};
   &:hover {
-    background-color: ${props => props.theme.cube.input?.colors.background || props.theme.input.backgroundColor};
+    background-color: ${props => props.theme.cube.input?.colors?.background || props.theme.input.backgroundColor};
   }
 `
 
 const MenuList = props => {
   const { isCreatable, onCreate, selectProps, selectRef } = props
-  console.warn(selectRef)
 
   const onCreateNew = (ev) => {
 

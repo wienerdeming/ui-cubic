@@ -5,7 +5,7 @@ export default (theme, params) => ({
       ? '#fafbfc'
       : state.isFocused
         ? 'white'
-        : theme.cube.input?.colors.background || theme.input.backgroundColor
+        : theme.cube.input?.colors?.background || theme.input.backgroundColor
     return ({
       ...provided,
       backgroundColor,

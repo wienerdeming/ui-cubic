@@ -78,7 +78,6 @@ const Select = props => {
         noOptionsMessage={noOptionsMessage}
         loadingMessage={loadingMessage}
         onChange={(option, action) => {
-          console.warn(action)
           if (typeof onChange === 'function') {
             onChange(option)
           }
