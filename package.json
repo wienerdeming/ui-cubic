@@ -26,8 +26,9 @@
   },
   "scripts": {
     "start": "cross-env NODE_ENV=development parcel serve demo/index.html --open --out-dir build",
-    "build": "rollup -c",
-    "build-demo": "rm -rf docs/ && cross-env NODE_ENV=production parcel build demo/index.html --out-dir docs"
+    "build": "NODE_ENV=production rollup -c --compact",
+    "build-demo": "rm -rf docs/ && cross-env NODE_ENV=production parcel build demo/index.html --out-dir docs",
+    "watch": "NODE_ENV=development rollup -c --watch"
   },
   "dependencies": {
     "prop-types": "^15.7.2",
@@ -46,21 +47,22 @@
     "styled-components": "^4.4.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.5",
-    "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "@babel/plugin-transform-runtime": "^7.7.6",
-    "@babel/preset-env": "^7.5.5",
-    "@babel/preset-react": "^7.7.4",
-    "@rollup/plugin-commonjs": "^11.0.0",
-    "@rollup/plugin-node-resolve": "^6.0.0",
+    "@babel/core": "^7.10.2",
+    "@babel/cli": "^7.10.1",
+    "@babel/plugin-proposal-class-properties": "^7.10.1",
+    "@babel/plugin-transform-runtime": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "@rollup/plugin-commonjs": "^13.0.0",
+    "@rollup/plugin-node-resolve": "^8.0.1",
     "babel-plugin-external-helpers": "^6.22.0",
-    "babel-plugin-module-resolver": "^3.2.0",
-    "babel-plugin-styled-components": "^1.10.6",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "babel-plugin-styled-components": "^1.10.7",
     "babelrc-rollup": "^3.0.0",
-    "cross-env": "^5.2.0",
-    "parcel-bundler": "^1.12.3",
-    "rollup": "^1.27.14",
-    "rollup-plugin-babel": "^4.3.3",
+    "cross-env": "^7.0.2",
+    "parcel-bundler": "^1.12.4",
+    "rollup": "^2.16.0",
+    "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-peer-deps-external": "^2.2.0"
   }
 }

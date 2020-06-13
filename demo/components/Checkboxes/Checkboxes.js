@@ -1,7 +1,6 @@
 import React from 'react'
-import Checkbox, { CheckboxGroup } from 'Checkbox'
+import { CheckboxGroup, Checkbox, Button } from '../../../dist/index.es'
 import { Title, Description } from '../Utils'
-import { Button } from 'Button'
 import styled from 'styled-components'
 
 const GroupWrapper = styled.div`
@@ -21,7 +20,7 @@ const Checkboxes = props => {
 
   return (
     <div>
-      <Title>Checkboxes </Title>
+      <Title>Checkboxes  </Title>
       <Description>Checkboxes allow the user to select one or more items from a set.</Description>
       <Checkbox label={'Checkbox 2'} />
       <Checkbox label={'Checkbox 3'} />

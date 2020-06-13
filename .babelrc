@@ -5,5 +5,8 @@
     "babel-plugin-styled-components",
     "@babel/plugin-proposal-optional-chaining"
   ],
-  "presets": ["@babel/preset-react"]
+  "presets": [
+    "@babel/preset-react",
+    ["@babel/env", {"modules": false}]
+  ]
 }

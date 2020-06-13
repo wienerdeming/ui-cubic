@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
-const keyframes = require('styled-components').keyframes
+import styled, {keyframes} from 'styled-components'
+
 
 const getSpinnerSize = props =>
   `${props.size}px`
