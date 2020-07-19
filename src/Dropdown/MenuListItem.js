@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 const MenuListItem = styled('div')`
   align-items: center;
-  border-radius: ${props => props.theme.cube.borderRadius?.md || props.theme.input.borderRadius};
+  border-radius: ${props => props.theme.cube.borderRadius || props.theme.input.borderRadius};
   color: #4e546a;
   cursor: pointer;
   display: flex;

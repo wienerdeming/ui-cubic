@@ -5,7 +5,7 @@ import Loader from '../Loader'
 
 const BaseButton = styled.button`
   align-items: center;
-  border-radius: ${props => props.theme.cube.borderRadius?.md || props.theme.input.borderRadius};
+  border-radius: ${props => props.theme.cube.borderRadius || props.theme.input.borderRadius};
   border: 1px solid ${props => props.theme.cube.palette?.primary?.main || props.theme.cube.primaryColor};
   cursor: pointer;
   display: inline-flex;

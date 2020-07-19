@@ -6,7 +6,7 @@ import { components } from 'react-select'
 const CreateButton = styled('div')`
   background-color: #fafbfc;
   border: 1px dashed #dee0e5;
-  border-radius: ${props => props.theme.cube.borderRadius?.md || props.theme.input.borderRadius};
+  border-radius: ${props => props.theme.cube.borderRadius || props.theme.input.borderRadius};
   color: ${props => props.theme.cube.palette?.primary?.main || props.theme.cube.primaryColor};
   cursor: pointer;
   font-size: 15px;

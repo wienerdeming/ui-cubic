@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const Box = styled.div`
   background: #ffffff;
-  border-radius: ${props => props.theme.input.borderRadius};
+  border-radius: ${props => props.theme.cube.borderRadius || props.theme.input.borderRadius};
   box-shadow: 0 4px 15px rgba(211, 216, 224, 0.24);
   padding: ${props => props.padding};
 `
