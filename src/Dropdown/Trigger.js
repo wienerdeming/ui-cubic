@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 
@@ -31,9 +31,7 @@ const Dots = styled('div')`
     `}
 `
 
-const Container = styled(({ innerRef, isOpen, ...props }) => (
-  <div ref={innerRef} {...props} />
-))`
+const Container = styled('div')`
   align-items: center;
   background-color: ${props => props.color};
   border-radius: 5px;
@@ -52,10 +50,10 @@ const Container = styled(({ innerRef, isOpen, ...props }) => (
     `}
 `
 
-const Trigger = props => {
-  const { mode, backgroundColor, dotColor, defaultTrigger, ...rest } = props
+const Trigger = forwardRef((props, ref) => {
+  const { mode, backgroundColor, dotColor, ...rest } = props
   return (
-    <Container color={backgroundColor} {...rest}>
+    <Container color={backgroundColor} ref={ref} {...rest}>
       <Dots color={dotColor} mode={mode}>
         <Dot />
         <Dot />
@@ -63,11 +61,10 @@ const Trigger = props => {
       </Dots>
     </Container>
   )
-}
+})
 
 Trigger.propTypes = {
   mode: PropTypes.string,
-  defaultTrigger: PropTypes.func,
   backgroundColor: PropTypes.string,
   dotColor: PropTypes.string,
 }

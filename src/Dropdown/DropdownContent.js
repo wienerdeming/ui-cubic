@@ -97,7 +97,7 @@ class DropdownContent extends React.Component {
         <TriggerComponent
           data-cy="dropdown-trigger"
           isOpen={open}
-          innerRef={triggerRef}
+          ref={triggerRef}
           onClick={event => {
             toggleMenu(event)
             this.checkMenuListViewport()
@@ -105,7 +105,6 @@ class DropdownContent extends React.Component {
           mode={defaultProps.mode}
           backgroundColor={backgroundColor}
           dotColor={dotColor}
-          defaultTrigger={Trigger}
         />
         {isRendered && (
           <Portal>
@@ -128,7 +127,7 @@ DropdownContent.propTypes = {
   children: PropTypes.node.isRequired,
   triggerBounds: PropTypes.object.isRequired,
   toggleMenu: PropTypes.func.isRequired,
-  trigger: PropTypes.func,
+  trigger: PropTypes.object,
   triggerRef: PropTypes.object.isRequired,
   fadeType: PropTypes.oneOf([null, 'in', 'out']),
   isRendered: PropTypes.bool.isRequired,

@@ -3,9 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import DropdownContent from './DropdownContent'
 
-const Root = styled(({ innerRef, ...props }) => (
-  <div ref={innerRef} {...props} />
-))`
+const Root = styled('div')`
   display: block;
   position: relative;
   margin-left: auto;
@@ -15,7 +13,14 @@ const Root = styled(({ innerRef, ...props }) => (
 const Dropdown = props => {
   const { trigger, backgroundColor, dotColor, ...rest } = props
 
-  const [isOpen, setIsOpen] = useState(false)
+
+  const [isOpen, _setIsOpen] = useState(false)
+  const isOpenRef = useRef(isOpen)
+
+  const setIsOpen = state => {
+    isOpenRef.current = state
+    _setIsOpen(state)
+  }
   const [triggerBounds, setTriggerBounds] = useState({
     top: 0,
     left: 0,
@@ -38,23 +43,23 @@ const Dropdown = props => {
     }
   }
 
-  const handleClick = event => {
-    const isOutsideWrapper = wrapperRef.current && !wrapperRef.current.contains(event.target)
-    const isOutsideTrigger = triggerRef.current && !triggerRef.current.contains(event.target)
-    const isOutside = isOutsideWrapper && isOutsideTrigger
-    if (isOutside && isOpen) setIsOpen(false)
+  const handleClick = (event) => {
+    if(isOpenRef.current){
+      console.warn(triggerRef.current)
+      const isOutsideWrapper = wrapperRef.current && !wrapperRef.current.contains(event.target)
+      const isOutsideTrigger = triggerRef.current && !triggerRef.current.contains(event.target)
+      const isOutside = isOutsideWrapper && isOutsideTrigger
+      if (isOutside) setIsOpen(false)
+    }
   }
 
   useEffect(() => {
     document.addEventListener('click', handleClick)
-    return () => {
-      isOpen && setIsOpen(false)
-      document.removeEventListener('click', handleClick)
-    }
+    return () => document.removeEventListener('click', handleClick)
   }, [])
 
   return (
-    <Root innerRef={wrapperRef} {...rest}>
+    <Root ref={wrapperRef} {...rest}>
       <DropdownContent
         open={isOpen}
         trigger={trigger}
@@ -71,7 +76,7 @@ const Dropdown = props => {
 
 Dropdown.propTypes = {
   children: PropTypes.node.isRequired,
-  trigger: PropTypes.func,
+  trigger: PropTypes.object,
   mode: PropTypes.oneOf(['vertical', 'horizontal']),
   backgroundColor: PropTypes.string,
   dotColor: PropTypes.string,
