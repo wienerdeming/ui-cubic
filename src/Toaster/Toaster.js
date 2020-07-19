@@ -9,7 +9,7 @@ import Check from './Check'
 const getIconBackground = props => {
   switch (props.type) {
     case toasterTypes.SUCCESS: return props.theme.cube.palette?.primary?.main || props.theme.cube.primaryColor
-    case toasterTypes.WARNING: return props.theme.cube.colorYellow
+    case toasterTypes.WARNING: return props.theme.cube.palette?.warning?.main || props.theme.cube.colorYellow
     case toasterTypes.ERROR: return props.theme.cube.palette?.danger?.main || props.theme.cube.colorRed
     default: return 'none'
   }
@@ -59,14 +59,14 @@ const Content = styled('div')`
 `
 
 const Title = styled('div')`
-  color: ${props => props.theme.cube.textColor};
+  color: ${props => props.theme.cube.palette?.text?.main};
   font-size: 15px;
   font-weight: 500;
   margin-bottom: 10px;
 `
 
 const Message = styled('div')`
-  color: ${props => props.theme.cube.lightGreyColor};
+  color: ${props => props.theme.cube.palette?.text?.light};
   font-size: 13px;
   font-weight: normal;
   line-height: 16px;

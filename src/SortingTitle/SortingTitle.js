@@ -5,7 +5,7 @@ import ArrowTop from './ArrowTop'
 import ArrowBottom from './ArrowBottom'
 
 const SortingTitle = styled.div`
-  color: ${props => props.theme.cube.lightGreyColor};
+  color: ${props => props.theme.cube.palette?.text?.light};
   font-size: 12px;
   font-weight: 500;
   display: flex;

@@ -60,7 +60,7 @@ export default props => {
         <IconInput
           ref={ref}
           label={'Input with icon'}
-          placeholder={'Input with icon'}
+          placeholder={'Input with  icon'}
           icon={UserIcon}
         />
       </InputWrapper>

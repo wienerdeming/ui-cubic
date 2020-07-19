@@ -5,9 +5,9 @@ import BaseButton from './BaseButton'
 
 const Button = styled(BaseButton)`
   background: ${props => props.theme.cube.palette?.primary?.main ||  props.theme.cube.primaryColor};
-  color: #fff;
+  color: ${props => props.theme.cube.palette?.primary?.text || '#fff'};
   &:focus {
-    background: ${props => props.theme.cube.palette?.primary?.main || props.theme.cube.primaryColor};
+    background: ${props => props.theme.cube.palette?.primary?.focus || props.theme.cube.primaryColor};
   }
 
   &:hover {

@@ -10,7 +10,7 @@ export default (theme, params) => ({
       ...provided,
       backgroundColor,
       boxShadow: null,
-      borderRadius: theme.cube.borderRadius?.md || theme.input.borderRadius,
+      borderRadius: theme.cube.input?.borderRadius || theme.input.borderRadius,
       borderColor: state.isFocused
         ? params.error
           ? `${theme.cube.palette?.danger?.main || theme.cube.colorRed} !important`
@@ -66,8 +66,8 @@ export default (theme, params) => ({
     ...provided,
     border: '1px solid',
     borderColor: theme.cube.input?.colors?.border || theme.input.borderColor,
-    boxShadow: theme.cube.shadows?.md ||theme.cube.boxShadow,
-    borderRadius: theme.cube.borderRadius?.md || theme.input.borderRadius,
+    boxShadow: theme.cube.boxShadow,
+    borderRadius: theme.cube.input?.borderRadius || theme.input.borderRadius,
     margin: '0',
     top: 'calc(100% + 4px)'
   }),
@@ -82,7 +82,7 @@ export default (theme, params) => ({
       : state.isFocused
         ? '#F5F6FD'
         : 'none',
-    borderRadius: theme.cube.borderRadius?.md || theme.input.borderRadius,
+    borderRadius: theme.cube.input?.borderRadius || theme.input.borderRadius,
     color: 'inherit',
     cursor: 'pointer',
     padding: '12px',
@@ -131,7 +131,7 @@ export default (theme, params) => ({
         : '#FAFBFB',
       border: '1px solid transparent',
       borderColor,
-      borderRadius: theme.cube.borderRadius?.md || theme.input.borderRadius,
+      borderRadius: theme.cube.input?.borderRadius || theme.input.borderRadius,
       transition: theme.cube.transition,
       margin: '4px',
       '&:hover': {

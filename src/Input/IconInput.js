@@ -11,7 +11,7 @@ const StyledWrapper = styled(InputWrapper)`
 `
 
 const InputIcon = icon => styled(icon)`
-  color: ${props => props.theme.cube.palette?.secondary?.light || props.theme.cube.lightGreyColor};
+  color: ${props => props.theme.cube.input?.colors?.icon || props.theme.cube.lightGreyColor};
   font-size: 20px;
   position: absolute;
   top: 50%;
@@ -26,7 +26,7 @@ const StyledInput = styled(InputBase)`
     color: ${props =>
     props.error
       ? (props.theme.cube.palette?.danger?.main || props.theme.cube.colorRed)
-      : (props.theme.cube.palette?.primary?.main || props.theme.cube.primaryColor)};
+      : (props.theme.cube.palette?.primary?.focus || props.theme.cube.primaryColor)};
   }
 `
 

@@ -17,7 +17,7 @@ const Container = styled('div')`
 
 const TextArea = styled('textarea')`
   background: ${props => props.theme.cube.input?.colors?.background || props.theme.input.backgroundColor};
-  border-radius: ${props => props.theme.cube.borderRadius?.md || props.theme.input.borderRadius};
+  border-radius: ${props => props.theme.cube.input?.borderRadius || props.theme.input.borderRadius};
   border: 1px solid ${props => props.theme.cube.input?.colors?.border || 'transparent'};
   color: inherit;
   display: block;
@@ -43,7 +43,7 @@ const TextArea = styled('textarea')`
     border-color: ${props =>
     props.error
       ? (props.theme.cube.palette?.danger?.main || props.theme.cube.colorRed)
-      : (props.theme.cube.palette?.primary?.main || props.theme.cube.primaryColor)};
+      : (props.theme.cube.palette?.primary?.focus || props.theme.cube.primaryColor)};
   }
 `
 

@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 const Input = styled.input`
   background: ${props => props.theme.cube.input?.colors?.background || props.theme.input.backgroundColor};
-  border-radius: ${props => props.theme.cube.borderRadius?.md || props.theme.input.borderRadius};
+  border-radius: ${props => props.theme.cube.input?.borderRadius || props.theme.input.borderRadius};
   border: 1px solid ${props => props.theme.cube.input?.colors?.border || 'transparent'};
   color: inherit;
   font-size: 15px;
@@ -36,7 +36,7 @@ const Input = styled.input`
     background: white;
     border-color: ${props => props.error
     ? (props.theme.cube.palette?.danger?.main || props.theme.cube.colorRed)
-    : (props.theme.cube.palette?.primary?.main || props.theme.cube.primaryColor)};
+    : (props.theme.cube.palette?.primary?.focus || props.theme.cube.primaryColor)};
   }
 
   }

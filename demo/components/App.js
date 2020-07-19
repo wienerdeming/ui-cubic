@@ -42,52 +42,47 @@ const Layout = styled.div`
 `
 
 const theme = {
-  shadows: {
-    sm: '',
-    md: '0px 4px 15px rgba(211, 216, 224, 0.5)',
-    lg: ''
-  },
-  borderRadius: {
-    sm: '5px',
-    md: '10px',
-    lg: ''
-  },
-
+  boxShadow: '0px 4px 15px rgba(211, 216, 224, 0.5)',
+  borderRadius: '5px',
   palette: {
+    text: {
+      main: '#36434E',
+      light: '#9AA6AC',
+    },
     primary: {
       main: '#2F80ED',
-      light: '#e0ecfc',
-      dark: '',
+      text: '#fff',
       hover: '#2F73DF',
       active: '#2F80ED',
-      focus: ''
+      focus: '#2F80ED'
     },
     secondary: {
-      main: '',
-      light: '',
-      dark: '',
-      hover: '',
-      active: '',
-      focus: ''
-
+      main: '#e3e7ea',
+      text: '#73839c',
+      hover: '#d3d7da',
+      active: '#d3d7da',
+      focus: '#d3d7da'
     },
     danger: {
-      main: '',
-      light: '',
-      dark: '',
-      hover: '',
-      active: '',
-      focus: ''
-
+      main: '#FF2E63',
+      text: '#fff',
+      hover: '#FF2E63',
+      active: '#FF2E63',
+      focus: '#FF2E63'
+    },
+    warning: {
+      main: '#E7A324'
     }
   },
   input: {
+    borderRadius: '10px',
     colors: {
-      background: '',
-      hover: '',
-      label: '',
-      placeholder: '',
-      border: '#e0e0e0'
+      background: '#F1F3F5',
+      hover: '#EDEFF2',
+      label: '#8F9BB0',
+      placeholder: '#AEB7C6',
+      border: '#e0e0e0',
+      icon: '#9AA6AC'
     }
   }
 }

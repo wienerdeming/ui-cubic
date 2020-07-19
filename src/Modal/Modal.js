@@ -6,7 +6,7 @@ import AnimationWrapper from '../AnimationWrapper'
 import CloseIcon from './CloseIcon'
 
 const StyledModal = styled('div')`
-  color: ${props => props.theme.cube.textColor};
+  color: ${props => props.theme.cube.palette?.text?.main};
   margin: 50px;
 `
 

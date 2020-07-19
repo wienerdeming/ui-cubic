@@ -3,9 +3,9 @@ import { colorConversion } from '../utils'
 import BaseButton from './BaseButton'
 
 const SecondaryButton = styled(BaseButton)`
-  background-color: ${props => props.theme.cube.palette?.secondary?.light || '#e3e7ea'};
+  background-color: ${props => props.theme.cube.palette?.secondary?.main || '#e3e7ea'};
   border: none;
-  color: ${props => props.theme.cube.palette?.secondary?.dark || '#73839c'};
+  color: ${props => props.theme.cube.palette?.secondary?.text || '#73839c'};
 
   :hover {
     background-color: ${props => props.theme.cube.palette?.secondary?.hover || colorConversion('#E3E7EA', -16)};
