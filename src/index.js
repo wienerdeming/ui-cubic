@@ -1,4 +1,4 @@
-import CubeThemeProvider from './CubeThemeProvider'
+import CubeThemeProvider, {theme} from './CubeThemeProvider'
 import { Input, IconInput } from './Input'
 import TextArea from './TextArea'
 import InputLabel from './InputLabel'
@@ -14,8 +14,10 @@ import {Select, SelectCreatable} from './Select'
 import { Dropdown, MenuListItem as DropdownItem } from './Dropdown'
 import Modal from './Modal'
 import Toaster from './Toaster'
+import TOASTER_TYPES from './Toaster/toasterTypes'
 import Loader from './Loader'
 import AnimationWrapper from './AnimationWrapper'
+
 
 export {
   Input,
@@ -47,5 +49,6 @@ export {
   Modal,
   Toaster,
   Loader,
-  AnimationWrapper
+  AnimationWrapper,
+  TOASTER_TYPES
 }

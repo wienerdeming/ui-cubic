@@ -28,7 +28,9 @@
     "start": "cross-env NODE_ENV=development parcel serve demo/index.html --open --out-dir build",
     "build": "NODE_ENV=production rollup -c --compact",
     "build-demo": "rm -rf docs/ && cross-env NODE_ENV=production parcel build demo/index.html --out-dir docs",
-    "watch": "NODE_ENV=development rollup -c --watch"
+    "watch": "NODE_ENV=development rollup -c --watch",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "prop-types": "^15.7.2",
@@ -56,6 +58,12 @@
     "@rollup/plugin-babel": "^5.0.3",
     "@rollup/plugin-commonjs": "^13.0.0",
     "@rollup/plugin-node-resolve": "^8.0.1",
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-docs": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/react": "^5.3.19",
+    "babel-loader": "^8.1.0",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-plugin-module-resolver": "^4.0.0",
     "babel-plugin-styled-components": "^1.10.7",
@@ -63,7 +71,7 @@
     "cross-env": "^7.0.2",
     "parcel-bundler": "^1.12.4",
     "rollup": "^2.16.0",
-    "rollup-plugin-terser": "^6.1.0",
-    "rollup-plugin-peer-deps-external": "^2.2.0"
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-terser": "^6.1.0"
   }
 }

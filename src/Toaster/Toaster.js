@@ -75,18 +75,18 @@ const Message = styled('div')`
 const toasterContent = {
   [toasterTypes.SUCCESS]: {
     icon: <Check />,
-    title: 'Успешно',
-    message: 'Успешно выполнено'
+    title: 'Success',
+    message: 'Successfully Done'
   },
   [toasterTypes.ERROR]: {
     icon: <AlertCircle />,
-    title: 'Ошибка',
-    message: 'Попробуйте еще раз'
+    title: 'Error',
+    message: 'Please, Try again'
   },
   [toasterTypes.WARNING]: {
     icon: <AlertTriangle />,
-    title: 'Внимание',
-    message: 'Внимание внимание'
+    title: 'Warning',
+    message: 'Something went wrong'
   }
 }
 

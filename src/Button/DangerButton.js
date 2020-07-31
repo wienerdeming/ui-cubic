@@ -9,16 +9,16 @@ const DangerButton = styled(BaseButton)`
 
   :focus {
     background-color: ${props => props.theme.cube.palette?.danger?.focus || colorConversion('#FF2E63', 199)};
-    color: ${props => props.theme.cube.palette?.danger?.text || '#fff'};
+    color: ${props => props.theme.cube.palette?.danger?.text || '#ff2e63'};
   }
 
   :hover {
     background-color: ${props => props.theme.cube.palette?.danger?.hover || colorConversion('#FF2E63', 199)};
-    color: ${props => props.theme.cube.palette?.danger?.text || '#fff'};
+    color: ${props => props.theme.cube.palette?.danger?.text || '#ff2e63'};
   }
   :active {
-    background-color: ${props => props.theme.cube.palette?.danger?.active || colorConversion('#FF2E63', 202)};
-    color: ${props => props.theme.cube.palette?.danger?.text || '#fff'};
+    background-color: ${props => props.theme.cube.palette?.danger?.active || colorConversion('#FF2E63', 190)};
+    color: ${props => props.theme.cube.palette?.danger?.text || '#ff2e63'};
   }
 `
 

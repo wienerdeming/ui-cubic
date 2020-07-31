@@ -45,7 +45,6 @@ const Dropdown = props => {
 
   const handleClick = (event) => {
     if(isOpenRef.current){
-      console.warn(triggerRef.current)
       const isOutsideWrapper = wrapperRef.current && !wrapperRef.current.contains(event.target)
       const isOutsideTrigger = triggerRef.current && !triggerRef.current.contains(event.target)
       const isOutside = isOutsideWrapper && isOutsideTrigger
