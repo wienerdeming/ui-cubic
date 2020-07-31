@@ -42,7 +42,7 @@ const MenuList = props => {
 
       {isCreatable && (
         <CreateButton onClick={onCreateNew} tabIndex={'-1'}>
-          + Создать новый
+          + Create
         </CreateButton>
       )}
     </components.MenuList>

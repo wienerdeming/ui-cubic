@@ -43,18 +43,18 @@ const Layout = styled.div`
 
 const theme = {
   boxShadow: '0px 4px 15px rgba(211, 216, 224, 0.5)',
-  borderRadius: '5px',
+  borderRadius: '8px',
   palette: {
     text: {
       main: '#36434E',
       light: '#9AA6AC',
     },
     primary: {
-      main: '#2F80ED',
+      main: '#6770E6',
       text: '#fff',
-      hover: '#2F73DF',
-      active: '#2F80ED',
-      focus: '#2F80ED'
+      hover: '#5761E3',
+      active: '#6a67e6',
+      focus: '#6a67e6'
     },
     secondary: {
       main: '#e3e7ea',
@@ -75,7 +75,7 @@ const theme = {
     }
   },
   input: {
-    borderRadius: '10px',
+    borderRadius: '8px',
     colors: {
       background: '#F1F3F5',
       hover: '#EDEFF2',

@@ -31,13 +31,14 @@
     "watch": "NODE_ENV=development rollup -c --watch"
   },
   "dependencies": {
+    "@babel/plugin-proposal-optional-chaining": "^7.9.0",
+    "Buttons": "0.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-fast-compare": "^3.0.1",
     "react-select": "^3.0.8",
-    "styled-components": "^5.1.1",
-    "@babel/plugin-proposal-optional-chaining": "^7.9.0"
+    "styled-components": "^5.1.1"
   },
   "peerDependencies": {
     "prop-types": "^15.7.2",
