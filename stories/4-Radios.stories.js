@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import styled from 'styled-components';
-import { RadioButton, RadioGroup} from '../src'
+import { RadioButton, RadioGroup} from '../dist'
 
 const Wrapper = styled.div`
   padding: 30px 20px;

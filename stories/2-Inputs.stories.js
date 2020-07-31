@@ -1,11 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import styled from 'styled-components';
-import {IconInput, Input} from '../src'
-import UserIcon from "../demo/icons/User";
-import EditIcon from "../demo/icons/Edit";
-import {Title} from "../demo/components/Utils";
-import TextArea from "../src/TextArea/TextArea";
+import {IconInput, Input, TextArea} from '../dist'
+import UserIcon from "./User";
+import EditIcon from "./User";
 
 
 const CustomStyleInput = styled(IconInput)`
@@ -21,6 +19,7 @@ const CustomStyleInput = styled(IconInput)`
   }
 `
 const Wrapper = styled.div`
+  padding: 30px 20px;
   > div {
   margin-right: 20px;
   margin-bottom: 10px;
@@ -69,7 +68,7 @@ storiesOf('Inputs', module)
           />
 
 
-          <Title>Text area</Title>
+          <h1>Text area</h1>
           <TextArea
             label={'Comments'}
             placeholder={'Add your comment'}

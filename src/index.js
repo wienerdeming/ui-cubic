@@ -16,6 +16,7 @@ import Modal from './Modal'
 import Toaster from './Toaster'
 import TOASTER_TYPES from './Toaster/toasterTypes'
 import Loader from './Loader'
+import SvgIcon from './SvgIcon'
 import AnimationWrapper from './AnimationWrapper'
 
 
@@ -50,5 +51,6 @@ export {
   Toaster,
   Loader,
   AnimationWrapper,
+  SvgIcon,
   TOASTER_TYPES
 }

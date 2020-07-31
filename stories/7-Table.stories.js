@@ -11,7 +11,7 @@ import {
   Box,
   DropdownItem,
   Modal
-} from '../src'
+} from '../dist'
 
 const Wrapper = styled.div`
   padding: 30px 20px;

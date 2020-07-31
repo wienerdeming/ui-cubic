@@ -1,8 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import styled from 'styled-components';
-import {Toaster, TOASTER_TYPES as TYPES} from '../src'
+import {Toaster, TOASTER_TYPES as TYPES} from '../dist'
 import Proptypes from 'prop-types'
+
 const Wrapper = styled.div`
   padding: 30px 20px;
 `
