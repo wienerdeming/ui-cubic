@@ -1,5 +1,5 @@
 import React from 'react'
-import {CubeThemeProvider} from '../src'
+import {CubeThemeProvider, theme} from '../dist'
 import {createGlobalStyle} from "styled-components";
 
 const GlobalStyle =  createGlobalStyle`
@@ -365,7 +365,7 @@ const GlobalStyle =  createGlobalStyle`
 
 
 const ThemeDecorator = storyFn => (
-  <CubeThemeProvider ><GlobalStyle/>{storyFn()}</CubeThemeProvider>
+  <CubeThemeProvider theme={theme}><GlobalStyle/>{storyFn()}</CubeThemeProvider>
 )
 
 export default ThemeDecorator

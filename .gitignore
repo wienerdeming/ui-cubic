@@ -8,3 +8,5 @@ coverage
 .yarn-cache
 .cache
 storybook-static
+demo
+docs

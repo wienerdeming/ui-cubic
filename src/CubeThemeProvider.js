@@ -34,11 +34,11 @@ export const theme = {
       light: '#9AA6AC',
     },
     primary: {
-      main: '#2F80ED',
+      main: '#6770E6',
       text: '#fff',
-      hover: '#2F73DF',
-      active: '#2F80ED',
-      focus: '#2F80ED'
+      hover: '#5761E3',
+      active: '#6a67e6',
+      focus: '#6a67e6'
     },
     secondary: {
       main: '#e3e7ea',

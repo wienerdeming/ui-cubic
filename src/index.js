@@ -52,5 +52,6 @@ export {
   Loader,
   AnimationWrapper,
   SvgIcon,
-  TOASTER_TYPES
+  TOASTER_TYPES,
+  theme
 }
