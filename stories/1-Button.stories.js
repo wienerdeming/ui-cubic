@@ -2,7 +2,7 @@ import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import styled from 'styled-components';
-import {BorderedButton, Button, DangerButton, SecondaryButton} from '../dist'
+import {BorderedButton, Button, DangerButton, SecondaryButton} from '../dist/index.es'
 
 
 const Wrapper = styled.div`

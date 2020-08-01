@@ -1,5 +1,5 @@
 import React from 'react'
-import {CubeThemeProvider, theme} from '../dist'
+import {CubeThemeProvider, theme} from '../dist/index.es'
 import {createGlobalStyle} from "styled-components";
 
 const GlobalStyle =  createGlobalStyle`

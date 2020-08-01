@@ -1,6 +1,6 @@
 {
   "name": "ui-cubic",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "private": false,
   "keywords": [
     "components",
@@ -12,7 +12,7 @@
   ],
   "description": "Styled UI Components for React Web Apps",
   "main": "./dist/index.cjs.js",
-  "module": "./dist/index.js",
+  "module": "./dist/index.es.js",
   "source": true,
   "author": "DalerLeo",
   "files": [
@@ -25,7 +25,7 @@
     "type": "git"
   },
   "scripts": {
-    "build": "NODE_ENV=production rollup -c --compact",
+    "build": "rm -rf dist && NODE_ENV=production rollup -c --compact",
     "watch": "NODE_ENV=development rollup -c --watch",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
@@ -38,7 +38,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-select": "^3.0.4",
+    "react-select": "^3.1.0",
     "styled-components": "^5.1.1"
   },
   "devDependencies": {

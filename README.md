@@ -16,11 +16,11 @@ React primitive UI components built with [styled-components][].
 [npm]: https://npmjs.com/package/ui-cubic
 
 ```sh
-npm i ui-cubic
+npm i ui-cubic react-select
 ```
 or 
 ```sh
-yarn add ui-cubic
+yarn add ui-cubic react-select
 ```
 
 ## Getting Started

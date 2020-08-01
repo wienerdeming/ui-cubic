@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import styled from 'styled-components';
-import {Checkbox, CheckboxGroup, Button} from '../dist'
+import {Checkbox, CheckboxGroup, Button} from '../dist/index.es'
 
 const Description = styled.div`
   margin: 15px 0;

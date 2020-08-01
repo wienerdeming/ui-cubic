@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import styled from 'styled-components';
-import {IconInput, Input, TextArea} from '../dist'
+import {IconInput, Input, TextArea} from '../dist/index.es'
 import UserIcon from "./User";
 import EditIcon from "./User";
 

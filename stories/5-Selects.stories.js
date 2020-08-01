@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { storiesOf } from '@storybook/react';
 import styled from 'styled-components';
-import {Modal, Select, SelectCreatable} from '../dist'
+import {Modal, Select, SelectCreatable} from '../dist/index.es'
 
 const Wrapper = styled.div`
   padding: 30px 20px;

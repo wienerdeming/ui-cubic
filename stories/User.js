@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import React from 'react'
-import {SvgIcon} from '../dist'
+import {SvgIcon} from '../dist/index.es'
 
 export default props => {
   return (
