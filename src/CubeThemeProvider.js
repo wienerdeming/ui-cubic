@@ -25,7 +25,51 @@ const inputTheme = {
   labelColor: '#8F9BB0',
   placeholderColor: '#AEB7C6'
 }
-
+export const theme = {
+  boxShadow: '0px 4px 15px rgba(211, 216, 224, 0.5)',
+  borderRadius: '5px',
+  palette: {
+    text: {
+      main: '#36434E',
+      light: '#9AA6AC',
+    },
+    primary: {
+      main: '#6770E6',
+      text: '#fff',
+      hover: '#5761E3',
+      active: '#6a67e6',
+      focus: '#6a67e6'
+    },
+    secondary: {
+      main: '#e3e7ea',
+      text: '#73839c',
+      hover: '#d3d7da',
+      active: '#d3d7da',
+      focus: '#d3d7da'
+    },
+    danger: {
+      main: '#FF2E63',
+      text: '#fff',
+      hover: '#FF2E63',
+      active: '#FF2E63',
+      focus: '#FF2E63'
+    },
+    warning: {
+      main: '#E7A324'
+    }
+  },
+  input: {
+    borderRadius: '10px',
+    colors: {
+      background: '#F1F3F5',
+      hover: '#EDEFF2',
+      label: '#8F9BB0',
+      placeholder: '#AEB7C6',
+      border: '#e0e0e0',
+      icon: '#9AA6AC'
+    }
+  }
+}
 const CubeThemeProvider = ({ children, theme }) => {
   const definedTheme = {
     cube: Object.assign({}, defaultTheme, theme),
